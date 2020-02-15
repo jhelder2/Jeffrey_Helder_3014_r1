@@ -66,7 +66,7 @@ function login($username, $userpassword){
 //if $id is true
         if(isset($id)){
 
-            redirect_to('../index.php');
+            redirect_to('admin/welcome.php');
 //if password doesnt match            
         }else{
             
@@ -74,7 +74,7 @@ function login($username, $userpassword){
         }
 //if username doesnt exsist
     }else{
-        return '<p>Username not found. </br>If new user <a href="user_login.php">Register Here</a>!</p>';
+        return '<p>Username not found. </br>If new user <a href="/admin/user_signup.php">Register Here</a>!</p>';
     }
 }
 ?>

@@ -1,20 +1,19 @@
 <?php
-require_once 'admin\scripts\load.php';
-    session_start();
-    $user_row = $_SESSION['user'];
+    require_once 'admin\scripts\load.php';
 
-    var_dump($user_row);
-//get current_time trim down to just time
-    $name=($user_row[4]);
-    $last_date=substr($user_row[7],0,10);
-    $last_time=substr($user_row[7],11,5);
-//remove ":" so it's just a number
-    $this_time = substr($user_row[8],11);
-    $thiss = str_replace(':', '', $this_time);
-//call function
-    $time = calculateTOD($thiss);
+    if(isset($_POST['submit'])){
+        $username = trim($_POST['username']);
+        $userpassword = trim($_POST['password']);
 
-    
+        if(!empty($username) && !empty($userpassword)){
+           
+            $message = login($username, $userpassword);
+        }else{
+            $message = 'Please fill out the required fields';
+        }
+    }if(isset($_POST['register'])){
+        redirect_to('admin/user_signup.php');
+    }
 ?>
 
 
@@ -24,14 +23,20 @@ require_once 'admin\scripts\load.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome Page</title>
+    <title>Welcome to Login page</title>
 </head>
 <body>
-    <h1>Hope Your Having A Great <?php echo !empty($time)?$time:''; ?> <?php echo !empty($name)?$name:' '; ?>!</h1>
-    <h2>Your last login was <?php echo !empty($last_date)?$last_date:' '; ?> at <?php echo !empty($last_time)?$last_time:' '; ?> </h2>
-    <h3>Happy to see you!</h3>
-    <div>
-        <img src="images/<?php echo !empty($time)?$time:''; ?>chibli.jpg" alt="chibli character">
-    </div>
+    <?php echo !empty($message)?$message:' '; ?>
+    <form action="index.php" method="post">
+        <label>Username:</label><br>
+        <input type="text" name="username" value="" /><br>
+
+        <label>Password:</label><br>
+        <input type="text" name="password" value="" /><br>
+
+        <button name="submit">Submit</button>
+
+        <button name="register">register</button>
+    </form>
 </body>
 </html>

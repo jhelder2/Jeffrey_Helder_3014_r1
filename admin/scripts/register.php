@@ -30,6 +30,6 @@ function register($useremail, $username, $userfname, $userlname, $userdob, $user
         $user_build = $pdo->prepare($newuser);
         $user_build->execute($new_data);
             
-        return '<p>User registration completed! <a href="user_login.php">Sign-in Here</a>!</p>';    
+        return '<p>User registration completed! <a href="../index.php">Sign-in Here</a>!</p>';    
     }
 }

@@ -9,4 +9,9 @@ HERE ARE THE LINKS TO RESOURCES I USED:
     How to subtract part of a string
         https://www.php.net/manual/en/function.substr.php
     
+    How to subtract specific charaters in array:
+        https://stackoverflow.com/questions/14114411/remove-all-special-characters-from-a-string
+    
+    PHP Operators reference
+        https://www.w3schools.com/php/php_operators.asp
 
