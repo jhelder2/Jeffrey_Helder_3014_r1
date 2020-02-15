@@ -1,0 +1,12 @@
+HERE ARE THE LINKS TO RESOURCES I USED:
+
+    How to pass varibles to new page:
+        https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
+
+    How to set timezones php:
+        php.net/manual/en/timezones.america.php
+
+    How to subtract part of a string
+        https://www.php.net/manual/en/function.substr.php
+    
+
