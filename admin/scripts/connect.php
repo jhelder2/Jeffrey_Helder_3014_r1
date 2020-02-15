@@ -1,7 +1,7 @@
 <?php
 class Database
 {
-    // Note: specify your own database credentials
+//change for mac/pc
     private $host = "localhost";
 
     private $db_name = "db_01_research";

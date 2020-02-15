@@ -23,15 +23,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Welcome to Login page</title>
 </head>
 <body>
-    <?php echo !empty($message)?$message:' '; ?>
+    
     <form action="index.php" method="post">
-        <label>Username:</label><br>
+        <p><?php echo !empty($message)?$message:' '; ?></p>
+        <label>Username:</label>
         <input type="text" name="username" value="" /><br>
 
-        <label>Password:</label><br>
+        <label>Password:</label>
         <input type="text" name="password" value="" /><br>
 
         <button name="submit">Submit</button>
