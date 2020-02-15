@@ -54,7 +54,6 @@ form {
     margin-top: 20px;
     padding-bottom: 20px;
     flex-direction: column;
-    width: 30%;
     border: solid 2px black;
     border: solid black 2px;
 }
@@ -66,9 +65,11 @@ label{
 
 input{
     margin-left: 15px;
+    margin-right: 15px;
     padding: 5px;
     border: solid 1px black;
     width: 50%;
+    min-width: 200px;
 }
 
 button {

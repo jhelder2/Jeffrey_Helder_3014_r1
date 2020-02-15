@@ -15,7 +15,10 @@
         }else{
             $message = 'Please fill out the required fields';
         }
+    }if(isset($_POST['login'])){
+        redirect_to('../index.php');
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +53,7 @@
         <input type="text" name="password" value="" /><br>
 
         <button name="submit">Submit</button>
+        <button name="login">Login</button>
     </form>
 </body>
 </html>
